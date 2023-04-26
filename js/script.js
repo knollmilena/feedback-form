@@ -60,10 +60,15 @@ if(!formTheme.parentElement.nextElementSibling.classList.contains('input__theme'
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   let result;
-  inputs.forEach((input) => result = validation(input));
-  if (result == true) {
+  let arr = []; // хотела сделать массив из резльтатов, но не получилось
+  inputs.forEach((input) => {
+  result = validation(input)
+  console.log(result);
+  if (result === true) {
     alert('Отправено!');
+    console.log(result);
   } else {
     alert('Заполните все поля!');
   }
+});
 });
