@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-secondary">
+    <main class="container">
+      <form class="form" name="feedback" id="form">
+        <ul class="form__list">
+          <h1 class="form__title">Форма обратной связи</h1>
+          <li class="form__item">
+            <label class="form__text">Ваше имя:</label>
+            <input class="input" type="text" name="name" id="name" placeholder="Илон Маск" />
+
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <label class="form__text">Электронная почта:</label>
+
+            <input class="input input__mail" type="email" name="email" id="email" placeholder="elon@musk.com" />
+
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <label class="form__text">Тема сообщения:</label>
+            <select class="form__theme input" name="form__theme">
+              <option class="form__theme__item forn__theme-technical-question" value="1">Технический вопрос</option>
+              <option class="form__theme__item form__theme-problem-order" value="2">Проблема с заказом</option>
+              <option class="form__theme__item form__theme-other" value="Другое">Другое</option>
+            </select>
+            <span class="error"></span>
+          </li>
+          <!-- <li class="form__item">
+            <label class="form__text">Укажите свою тему:</label>
+            <input class="input input__theme" type="text" placeholder="Расскажите подробнее"  />
+          </li> -->
+          <li class="form__item">
+            <label class="form__text">Текст сообщения:</label>
+
+            <textarea class="input form__message" name="textmess"></textarea>
+
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <button class="form__button" id="send_mess">отправить</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+  </body>
+</html>
