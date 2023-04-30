@@ -74,13 +74,19 @@ if(!formTheme.parentElement.nextElementSibling.classList.contains('input__theme'
 //   })
 // );
 
-form.addEventListener('input', function(){
-  for (let input of liveInputs) {
-    input.addEventListener('input', function () {
-          validation(input);
-        })
+// form.addEventListener('input', function(){
+//   for (let input of liveInputs) {
+//     input.addEventListener('input', function () {
+//           validation(input);
+//         })
+//   }
+// })
+
+form.addEventListener('input', (ev) => {
+  if (ev.target.tagName === 'INPUT') {
+    // здесь пишем логику обработки ввода текста
   }
-})
+});
 
 
 form.addEventListener('submit', function (event) {
